@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #5c5c76;
+  color: #fff;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: #ece7e1; 
+  font-style: italic;/* Change the color for the website name */
+  margin-left: 8px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 0px;
+}
+
+nav li a {
+  color: #ece7e1; /* Change the color for the navigation links */
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.logo img {
+  width: 80px; /* Adjust the size as needed */
+  height: 70;
+  border: 0px solid #13110e; /* Change the border color for the logo */
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.video-container {
+  flex: 1; /* Takes up 50% of the container */
+  padding: 20px;
+}
+
+video {
+  width: 900px; /* Make the video responsive */
+  height: 550px;
+}
+
+.text-container {
+  flex: 1; /* Takes up 50% of the container */
+  padding: 20px;
+}
+
+.text-container h2 {
+  font-size: 34px;
+  margin: 0;
+}
+
+.text-container p {
+  font-size: 26px;
+}
+
+    footer {
+  background-color: #5c5c76;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <form action="" method="post"></form>
+  <header>
+    <h1>Medi Box</h1>
+    <nav>
+      <ul>
+        <li><a href="inspire.html">Inspiration</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="d.html">Medicines Info</a></li>
+        <li><a href="phy.html">More Info</a></li>
+        <li><a href="aa.html">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="care.jpg" alt="Website Logo">
+    </div>
+  </header>
+  <div class="container">
+    <div class="video-container">
+      <video width="640" height="360" controls autoplay muted loop id="myVideo">
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="text-container">
+      <h2>Welcome to our website</h2>
+      <p>The doctor of the future will give no medicine but will instruct his patient in the care of the human frame, in diet, and the cause and prevention of disease. He who studies medicine without books sails an uncharted sea, but he who studies medicine without patients does not go to sea at all.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2023 Care Corps. All rights reserved.
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('myVideo');
+
+      // Set the playback speed to 1.5x (change this value as needed)
+      video.playbackRate = 0.4;
+
+      // Play the video
+      video.play();
+    });
+  </script>
+
+  <!-- Your webpage content goes here -->
+
+</body>
+</html>
