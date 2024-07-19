@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage</title>
+    <style>
+        body{
+            background-image: url(n6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 1500px;
+            height: 1100px;
+        }
+  header {
+  background-color: #5c5c76;
+  color: #fff;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-top: 0px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: #ece7e1; /* Change the color for the website name */
+  font-size: 35px;
+  margin-left: 8px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 0px;
+}
+
+nav li a {
+  color: #ece7e1; /* Change the color for the navigation links */
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.logo img {
+  width: 80px; /* Adjust the size as needed */
+  height: 70px;
+  border: 0px solid #ff9900; /* Change the border color for the logo */
+}
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .background-image {
+            width: 1500px;
+            height: 1100px;
+            border-radius: 0px;
+        }
+        .text {
+            position: absolute;
+            top: 50%; /* Adjust the top position as needed */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; /* Adjust the text color as needed */
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .search-bar {
+            position: absolute;
+            top: 100px; /* Adjust the top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 5%;
+            /* Adjust the background color and opacity as needed */
+            padding: 10px;
+            border-radius: 5px;/* Add a shadow for visibility */
+        } 
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+.i{
+    width: 1500px;
+    height:490px;
+    margin-left: 17px;
+    border-radius: 7px;
+    margin-top: 70px;
+}
+.result {
+            border: 7px solid #ccc;
+            width: 70%;
+            margin-left: 200px;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            font-size: 20px;
+        }
+
+        /* Style the image */
+        .result img {
+            width: 70%;
+            height: 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>Medi Box</b></h1>
+        <nav>
+          <ul>
+            <li><a href="inspire.html" style="margin-left: 590px;">Inspiration</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="d.html">Medicines Info</a></li>
+            <li><a href="phy.html">More Info</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="care.jpg" alt="Website Logo">
+        </div>
+      </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchBar" placeholder="Search">
+            <button onclick="performSearch()">Search</button>
+            <div id="searchResults"></div>
+            </div>
+    </div>
+    <script>
+        // Define a mapping of search terms to results
+        
+        var searchResultsMap = {
+            "cold": {
+            text: "<b>Self-care:</b> Nasal washing<br> Throat lozenge<br> Menthol<br> ",
+            text2: "<b>Medications:</b> Nonsteroidal anti-inflammatory drug<br> Analgesic<br> Antihistamine<br> Cough medicine<br> Decongestant<br>",
+            imageURL: "cold.jpg",
+            text3: "<b>What food can i eat if i have cold?</b><br>Bananas. Bananas are one of the easiest foods on the digestive system and remain one of the few appealing foods when your appetite diminishes due to illness Berries. If you have a cold, try eating berries Broth Carrots.Chamomile Tea Cherries Citrus Fruits. ...Garlic.",
+            text4: ""
+        },
+            "fever": {
+            text: "<b>SELF-TREATMENT</b> Medications such as paracetamol and ibuprofen may help to ease discomfort. Avoid giving children aspirin because this may cause a rare, serious condition.",
+            text2: "Younger than three months with a 100.4°F (38°C) or higher fever Three to six months old with 102°F (38.9°C) or higher fever Six to 24 months old with a 102°F (38.9°C) or higher fever that lasts more than a day Two years old or older with fever who is listless<br> irritable or vomiting repeatedly<br> if you're an adult with a 103°F (39.4°C) or higher fever",
+            imageURL: "fever.jpg",
+            text3: "<b>Fevers can be caused by several factors — infection caused by bacteria, fungi, virus, and also, as a result of certain inflammatory conditions like arthritis, inflammation of the lining of joints, etc. Heat exhaustion, extreme sunburn can also be the cause.It is important that we make changes in our diet when suffering from fever. Resting, drinking fluids, and getting proper nutrition are some of the most important things we can do to feel better, and recover faster. One should note that if the temperature is high, the energy requirement of the body increases by 50 percent. This is a direct result of tissue damage.",
+            text4: ""
+        },
+            "hypertension": {
+            text: "<b>Medications:</b> Amlodipine<br> Lisinopril<br> Hydrochlorothiazide",
+            text2: "<b>Description:</b> High blood pressure can lead to various cardiovascular problems if left untreated",
+            imageURL: "pp2.jpeg",
+            text3: "",
+            text4: ""
+        },
+            "diabetes": {
+            text: "<b>Medications:</b> Metformin, Insulin, Glipizide",
+            text2: "<b>Description:</b> Type 2 diabetes affects blood sugar control and insulin sensitivity.",
+            imageURL: "dia.jpg",
+            text3: "<b>What foods can I eat if I have diabetes?</b><br>vegetablesnonstarchy: includes broccoli, carrots, greens, peppers, and tomatoesstarchy: includes potatoes, corn, and green peasfruits—incudes oranges, melon, berries, apples, bananas, and grapesgrains—at least half of your grains for the day should be whole grainsincludes wheat, rice, oats, cornmeal, barley, and quinoaexamples: bread, pasta, cereal, and tortillasprotein lean meat chicken or turkey without the skin fish eggs nuts and peanuts dried beans and certain peas, such as chickpeas and split peas meat substitutes, such as tofu dairy—nonfat or low fatmilk or lactose-free milk if you have lactose intoleranceyogurt cheese",
+            text4: "<b>What physical activities should I do if I have diabetes?</b><br>Most kinds of physical activity can help you take care of your diabetes. Certain activities may be unsafe for some people, such as those with low vision or nerve damage to their feet. Ask your health care team what physical activities are safe for you. Many people choose walking with friends or family members for their activity."
+        },
+            "asthma": {
+            text: "<b>Medications:</b> Albuterol inhaler<br>Fluticasone inhaler<br> Montelukast",
+            text2: "<b>Description:</b> Asthma is a chronic respiratory condition characterized by airway inflammation and bronchoconstriction.",
+            imageURL: "astma.jpg",
+            text3: "<b>What Should I Eat to Prevent Asthma?</b><br>Given the murky evidence for a link between asthma and nutrition, there is no particular asthma diet. But it's a good idea to adhere to a healthy diet, anyway.Eat plenty of fruits and vegetables. We still don’t know which fruits and vegetables might have an effect on asthma, so the best advice is to increase your intake of a wide variety of them.Eat foods with omega-3 fatty acids. Omega-3 fatty acids -- found in fish like salmon, tuna, and sardines and some plant sources, like flaxseed -- are believed to have a number of health benefits. Although the evidence that they help with asthma is not clear, it’s still a good idea to include them in your diet.Avoid trans fats and omega-6 fatty acids. There’s some evidence that eating omega-6 fats and trans fats, found in some margarines and processed foods, may worsen asthma, and other serious health conditions such as heart disease.",
+            text4: ""
+        },
+            "migraine headache": {
+            text: "<b>Medications:</b> Sumatriptan<br> Ibuprofen<br> Propranolol",
+            text2: "<b>Description:</b> Migraines are severe headaches often accompanied by other symptoms like nausea and sensitivity to light.",
+            imageURL: "pp2.jpeg",
+            text3: "",
+            text4: ""
+        },
+           "depression": {
+            text: "<b>Medications:</b> Sertraline<br> Escitalopram<br> Citalopram",
+            text2: "<b>Depression:</b> is a mood disorder characterized by persistent feelings of sadness and hopelessness",
+            imageURL: "pp2.jpeg",
+            text3: "",
+            text4: ""
+        },
+           "anxiety disorder":  {
+            text: "<b>Medications:</b> Alprazolam (Xanax)<br> Lorazepam<br> Sertraline",
+	        text2: "<b>Description:</b> Anxiety disorders involve excessive worry and fear.",
+            imageURL: "pp2.jpeg",
+            text3: "",
+            text4: ""
+        },
+           "allergies": {
+	        text: "<b>Medications:</b> Cetirizine<br> Loratadine<br> Fluticasone nasal spray",
+	        text2: "<b>Descrpition:</b> Allergic rhinitis is an allergic reaction to pollen dust or other allergens.",
+            imageURL: "all.jpg",
+            text3: "<b>The best way to avoid the symptoms of food allergies is to steer clear of the allergens themselves. But you can also use dietary choices to your advantage, as research shows that eating a healthy diet full of fruits and vegetables can help with allergies, too. While most food allergies are caused by a handful of common foods, including milk, eggs, peanuts, tree nuts, soy, wheat, and fish and shellfish, most people with allergies don’t realize that eating a healthy diet, including certain specific foods, can help them manage their symptoms as well.",
+            text4: ""
+        },
+           "thyroid disorders": {
+	        text: "<b>Medications:</b> Levothyroxine<br> Methimazole<br> Propylthiouracil",
+	        text2: "<b>Descrpition:</b> Thyroid disorders affect the function of the thyroid gland, leading to hormone imbalances.",
+            imageURL: "thy.jpg",
+            text3: "<b>What are some foods that are good for the thyroid?</b><br>First off, certain nutrients are key for supporting normal thyroid function, especially if you’re at risk of iodine deficiency (which can disrupt normal thyroid function). Without sufficient iodine intake (about 150 mcg each day) your thyroid won’t be able to produce enough hormones—which can lead to hypothyroidism (underactive thyroid). [1]So if you’re looking for iodine-rich foods to help thyroid function, here are several nutritious options: Roasted seaweed Fish and seafood—especially shrimp, cod, and tuna Dairy products, including yogurt, milk, and cheese Eggs Nuts Iodized salt (also known as table salt)",
+            text4: ""
+        },
+            "high cholesterol": {
+	         text: "<b>Medications:</b> Statins (e.g., Atorvastatin)<br> Ezetimibe<br> Niacin",
+	         text2: "<b>Description:</b> Hyperlipidemia is characterized by high levels of cholesterol in the blood.",
+             imageURL: "chol.jpg",
+             text3: "<b>What foods should you add to your diet during cholestrol</b><br>A diet rich in fruits and vegetables can increase important cholesterol-lowering compounds in your diet. These compounds, called plant stanols or sterols, work like soluble fiber. Eat fish that are high in omega-3 fatty acids. These acids won't lower your LDL level, but they may help raise your HDL level",
+             text4: ""
+        },
+            "cancer": { 
+	         text: "<b>Treatments:</b> Chemotherapy<br> Radiation therapy<br> Immunotherapy",
+	         text2: "<b>Description:</b> Cancer is a group of diseases characterized by uncontrolled cell growth.",
+             imageURL: "canc.jpg",
+             text3: "<b>What foods should you add to your diet during cancer treatment?“Anyone with a chronic illness, even if it’s not cancer, should eat foods high in protein, healthy fats, whole grains, and vitamins and minerals,” Rajagopal emphasizes. “If possible, make these dietary adjustments before cancer treatment begins so you’ll be healthier going into treatment.",
+             text4: ""
+        },
+            "aids": {
+	         text: "<b>Medications:</b> Antiretroviral therapy (e.g., Tenofovir, Emtricitabine, Dolutegravir)",
+	         text2: "<b>Description:</b> HIV is a viral infection that weakens the immune system, leading to AIDS.",
+             imageURL: "aids.jpg",
+             text3: "<b>What is a healthy diet for people living with HIV?</b><br>In general, the basics of a healthy diet are the same for everyone, including people with HIV.Eat a variety of foods from the five food groups: fruits, vegetables, grains, protein foods, and dairy.Eat the right amount of food to maintain a healthy weight.Choose foods low in saturated fat, sodium (salt), and added sugars.",
+             text4: "<b>Follow the four basic steps to food safety: </b><br>clean, separate, cook, and chill.Clean: Wash your hands, cooking utensils, and countertops often when preparing foods.Separate: Separate foods to prevent the spread of any germs from one food to another. For example, keep raw meat, poultry, seafood, and eggs separate from foods that are ready to eat, including fruits, vegetables, and breads.Cook: Use a food thermometer to make sure that foods are cooked to safe temperatures.Chill: Refrigerate or freeze meat, poultry, eggs, seafood, or other foods that are likely to spoil within 2 hours of cooking or purchasing."
+        },
+            "ovarian cancer": {
+	         text: "<b>Treatment:</b> Surgery<br> Chemotherapy<br> Targeted therapy",
+	         text2: "<b>Description:</b> Ovarian cancer is a type of cancer that forms in the ovaries.",
+             imageURL: "cancer.jpg",
+             text3: "<b>Low-fat diets may also help you keep lean muscle. Many people with late-stage ovarian cancer have a high risk of losing muscle mass and strength. But other studies suggest that getting more of your calories from protein and fat and fewer calories from carbohydrates could be better if you have advanced ovarian cancer.",
+             text4: ""
+        },
+            "gastric and stomach ulcers": {
+             text: "<b>Gastrointestinal Medications:</b> Antacids Aluminum hydroxide, magnesium hydroxide (Mylanta, Maalox) Calcium carbonate (Tums, Rolaids, Chooz)Bismuth subsalicylate (Pepto-Bismol)Sodium bicarbonate (Alka-Seltzer)",
+             text2: "",
+             imageURL: "gas.jpg",
+             text3: "<b>In addition to taking the antibiotics and acid-blocking medications recommended by your doctor for your ulcer treatment, eating these foods may also be helpful against the ulcer-causing bacteria: cauliflower cabbage radishes apples blueberries raspberries blackberries strawberries cherries bell pepperscarrots broccoli leafy greens, such as kale and spinach probiotic-rich foods, such as yogurt, kefir, miso, sauerkraut, and kombucha.olive oil and other plant-based oils honey garlic decaffeinated green tea licorice turmeric",
+             text4: ""
+        },
+        // Add more mappings as needed
+    };
+    function performSearch() {
+            // Get the search input
+            var searchInput = document.getElementById("searchBar").value.toLowerCase();
+
+            // Check if the search term is in the mapping
+            if (searchResultsMap.hasOwnProperty(searchInput)) {
+                // Get the predefined result
+                var result = searchResultsMap[searchInput];
+
+                // Create a new div element to display the result
+                var resultDiv = document.createElement("div");
+                resultDiv.className = "result"; // Apply the CSS class
+                resultDiv.innerHTML = "'" + searchInput + "':<br>" +
+                    "<p>" + result.text + "</p>" +
+                    "<p>" + result.text2 + "</p>" +
+                    "<img src='" + result.imageURL + "' alt='Image for " + searchInput + "'>" +
+                    "<p>" + result.text3 + "</p>" +
+                    "<p>" + result.text4 + "</p>" ;
+
+                // Get the searchResults div and clear its content
+                var searchResults = document.getElementById("searchResults");
+                searchResults.innerHTML = "";
+
+                // Append the resultDiv to the searchResults div
+                searchResults.appendChild(resultDiv);
+            } else {
+                // Display a message for terms not found in the mapping
+                var searchResults = document.getElementById("searchResults");
+                searchResults.innerHTML = "No results found for '" + searchInput + "'";
+            }
+        }
+    </script>
+</body>
+</html>

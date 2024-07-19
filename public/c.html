@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Name</title>
+    <style>
+        /* Reset some default styles */
+           /* Reset some default styles */
+           body{
+            background-color:whitesmoke;
+           }
+           header {
+    background-color: #5c5c76;
+    color: #fff;
+    padding: 0px 0;
+    margin-left: -10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 70px;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.i{
+    width: 1500px;
+    height:490px;
+    margin-left: 17px;
+    border-radius: 7px;
+    margin-top: 70px;
+}
+.video-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    /* Style the video element */
+    video {
+      width: 80%; /* Make the video responsive */
+      margin-left: 140px;
+      height: auto; /* Maintain the video's aspect ratio */
+      border-radius: 20px;
+    }
+    </style>
+</head>
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="inspire.html">Inspiration</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="d.html">medical care</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><img src="lo2.gif" alt="Your Logo" style="margin-left: -5px; max-height: 100px; vertical-align: middle; margin-right: -50px; border-radius: 50px;"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="video-container">
+            <video id="myVideo" autoplay muted loop>
+              <source src="vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              var video = document.getElementById('myVideo');
+        
+              // Set the playback speed to 1.5x (change this value as needed)
+              video.playbackRate = 0.4;
+        
+              // Play the video
+              video.play();
+            });
+          </script>
+        
+</body>
+</html>

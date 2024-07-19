@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biographies</title>
+    <style>
+
+
+        /* Biography container styles */
+        body {
+            overflow: hidden;
+        }
+
+        .loading-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f8f8;
+            z-index: 9999;
+        }
+
+        .loading-icon {
+            font-size: 50px;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Container for biography columns with scrolling */
+        .biography-container {
+            overflow: auto;
+            height: 80vh; /* Adjust the height as needed */
+        }
+
+        /* Biography container styles */
+        .bio-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 300px;
+            float: left;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+            animation-duration: 880s;
+        }
+
+        /* Hover effect for biography containers */
+        .bio-container:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the person's name */
+        .person-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Style for the person's photo */
+        .person-photo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the person's biography */
+        .person-bio {
+            margin-top: 10px;
+        }
+
+        /* Animation for biography container appearance */
+        .bio-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        header {
+  background-color: #5c5c76;
+  color: #fff;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-top: 0px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: #ece7e1; 
+  font-style: italic;/* Change the color for the website name */
+  margin-left: 18px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 0px;
+}
+
+nav li a {
+  color: #ece7e1; /* Change the color for the navigation links */
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.logo img {
+  width: 80px; /* Adjust the size as needed */
+  height: 70px;
+  border: 0px solid #ff9900; /* Change the border color for the logo */
+}
+
+.i{
+    width: 1500px;
+    height:490px;
+    margin-left: 17px;
+    border-radius: 7px;
+    margin-top: 70px;
+}
+.clear-float {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medi Box</h1>
+        <nav>
+          <ul>
+            <li><a href="inspire.html">Inspiration</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="d.html">Medicines Info</a></li>
+            <li><a href="#">More Info</a></li>
+          </ul>
+        </nav>
+        <div class="logo">
+          <img src="care.jpg" alt="Website Logo">
+        </div>
+      </header>
+
+
+    <div class="loading-page">
+        <div class="loading-icon">Loading...</div>
+    </div>
+    <div class="biography-container">
+    <div class="bio-container">
+        <div class="person-name">Yuvraj Singh</div>
+        <img class="person-photo" src="yuv.jpg" alt="Person 1">
+        <p class="person-bio">Yuvraj Singh, a former Indian cricketer, battled cancer during his cricket career. He successfully fought the disease and returned to the sport, showcasing incredible resilience and determination.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Stephen Hawking</div>
+        <img class="person-photo" src="steph.jpg" alt="Person 2">
+        <p class="person-bio">The renowned theoretical physicist Stephen Hawking, who suffered from amyotrophic lateral sclerosis (ALS), continued to make groundbreaking contributions to the field of cosmology while battling the disease. His work on black holes and the nature of the universe is celebrated worldwide</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Nick Vujicic</div>
+        <img class="person-photo" src="nick.jpg" alt="Person 1">
+        <p class="person-bio">
+
+           <b> Nick Vujicic</b> was born in 1982 in Melbourne, Australia, with a rare condition called tetra-amelia syndrome, which left him without arms and legs. Despite his physical limitations, Nick has become a motivational speaker, author, and evangelist who has inspired millions of people worldwide.
+            </p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Steve Jobs</div>
+        <img class="person-photo" src="stevej.jpg" alt="Person 1">
+        <p class="person-bio">
+            Steve Jobs, the co-founder of Apple Inc., is known for his significant contributions to the world of technology. He faced his own health challenges during his life:
+            
+            Pancreatic Cancer Diagnosis: In 2003, Jobs was diagnosed with a rare form of pancreatic neuroendocrine tumor, a serious health condition. He chose to keep his diagnosis private initially
+            </p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Michael J Fox</div>
+        <img class="person-photo" src="mic.jpg" alt="Person 1">
+        <p class="person-bio">Michael J. Fox: Actor Michael J. Fox has been living with Parkinson's disease since 1991. Despite his diagnosis, he has continued to act and has become an advocate for Parkinson's research, raising millions of dollars for the cause.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Selena Gomez</div>
+        <img class="person-photo" src="sel.jpg" alt="Person 1">
+        <p class="person-bio">Singer and actress Selena Gomez has been open about her struggles with lupus, an autoimmune disease. Despite her health challenges, she has achieved great success in the entertainment industry and has used her platform to raise awareness about lupus</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Stevie Wonder</div>
+        <img class="person-photo" src="won.jpg" alt="Person 1">
+        <p class="person-bio"> Stevie Wonder is a beloved American icon and an indisputable genius and The legendary musician Stevie Wonder was born prematurely and became blind shortly after birth due to complications. Despite his blindness, he became one of the most influential and successful musicians in history, winning numerous Grammy Awards and creating timeless music.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Amitabh Bachchan:</div>
+        <img class="person-photo" src="bachan.jpg" alt="Person 1">
+        <p class="person-bio">Amitabh Bachchan is widely regarded as one of the greatest actors in the history of Indian cinema.As previously mentioned, Amitabh Bachchan, one of India's most iconic actors, has faced various health issues over the years, including a near-fatal injury and other medical conditions. Despite these challenges, he has maintained a successful career in the film industry.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Manisha Koirala:</div>
+        <img class="person-photo" src="mani.jpg" alt="Person 1">
+        <p class="person-bio"> Manisha Koirala is a well-known Indian actress who has appeared in numerous Bollywood films. She was diagnosed with ovarian cancer in 2012 but successfully battled the disease and has continued her acting career. She has also become an advocate for cancer awareness and the importance of early detection.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Helen Keller</div>
+        <img class="person-photo" src="hel.jpg" alt="Person 1">
+        <p class="person-bio">she was both deaf and blind from a young age due to an illness.She overcame these challenges with the help of her teacher,Anne Sullivan,and went on to become a renowned author, political activist, and lecturer, advocating for the rights of people with disabilities.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Christopher Reeve</div>
+        <img class="person-photo" src="spy.jpg" alt="Person 1">
+        <p class="person-bio"> Best known for his role as Superman in the 1970s and 1980s, Christopher Reeve became a quadriplegic after a horse-riding accident in 1995. He continued to work as an actor and became a vocal advocate for spinal cord injury research.</p>
+    </div>
+    <div class="bio-container">
+        <div class="person-name">Dipa Karmakar:</div>
+        <img class="person-photo" src="dip.jpg" alt="Person 1">
+        <p class="person-bio"> Gymnast Dipa Karmakar faced physical limitations due to flat feet, which is uncommon in gymnastics. However, she worked tirelessly to overcome these challenges and became the first Indian female gymnast to compete in the Olympics, representing India at the 2016 Rio Olympics.</p>
+    </div>
+    <div class="clear-float"></div>
+    </div>
+    <a href="#" class="go-back-button" onclick="goBack()">Go Back</a>
+
+    <!-- Add more bio-container divs for additional people -->
+
+    <script>
+        // JavaScript to hide loading page and show biography containers row by row
+        window.addEventListener("load", function () {
+            var loadingPage = document.querySelector(".loading-page");
+            var bioContainers = document.querySelectorAll(".bio-container");
+
+            // Hide the loading page
+            loadingPage.style.display = "none";
+
+            // Function to show biography containers row by row
+            function showContainers(index) {
+                if (index < bioContainers.length) {
+                    bioContainers[index].classList.add("show");
+                    setTimeout(function () {
+                        showContainers(index + 1);
+                    }, 200); // Delay between showing each container (adjust as needed)
+                }
+            }
+
+            // Start showing containers
+            showContainers(0);
+        });
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</body>
+</html>
